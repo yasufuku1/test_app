@@ -1,0 +1,25 @@
+.session-innder {
+    max-width: 500px;
+    padding: 15px 20px;
+    margin: 0 auto;
+}
+
+.session-innder .field {
+    margin: 0 20px 10px;
+}
+
+input#user_email,
+input#user_password {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #1b2538;
+    line-height: 1.5rem;
+}
+
+input[type="submit"] {
+    width: 160px;
+    font-size: 1rem;
+    height: 30px;
+    margin: 30px;
+}
