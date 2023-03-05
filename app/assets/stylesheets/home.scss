@@ -1,3 +1,49 @@
 .home-innder {
-    width: 700px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sign-in-body {
+    text-align: center;
+    width: 300px;
+    height: 30px;
+    background: #20d17e;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #20d17e;
+    transition: .4s;
+}
+
+.sign-in-body:hover{
+    background: azure;
+}
+
+a.sign-in-body {
+    padding: 3px;
+    color: azure;
+    line-height: 170%;
+}
+
+a.sign-in-body:hover {
+    color: #20d17e;
+}
+.sign-up-body {
+    text-align: center;
+    margin: 10px auto;
+    width: 300px;
+    height: 30px;
+    background-color: #0d6efd;
+    border: 2px solid #0d6efd;
+    display: block;
+    transition: .4s;
+}
+.sign-up-body:hover {
+    background: azure;
+}
+a.sign-up-body {
+    padding: 3px;
+    color: azure;
+    line-height: 200%;
+}
+a.sign-up-body:hover {
+    color: #0d6efd;
 }
