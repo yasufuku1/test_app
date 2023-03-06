@@ -11,6 +11,7 @@ label {
 }
 
 input#user_email,
+input#user_name,
 input#user_password,
 input#user_password_confirmation {
     width: 100%;
@@ -25,4 +26,8 @@ input[type="submit"] {
     font-size: 1rem;
     height: 30px;
     margin: 30px;
+}
+
+.back-field {
+    margin-left: 30px;
 }
