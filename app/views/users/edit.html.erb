@@ -1,0 +1,21 @@
+<div class="container">
+    <h2><span class="title">ユーザ編集</span></h2>
+    <%= form_with model:@user, local:true do |f| %>
+        <div class="edit-field">
+            <%= f.label :email%>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email" %>
+        </div>
+
+        <div class="edit-field">
+            <%= f.label :name %>
+            <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "name" %>
+        </div>
+
+        <div class="button-box">
+            <%= f.submit "変更を保存する" %><br>
+        </div>
+    <% end %>
+    <%= link_to user_path, class: "back-button" do %>
+        戻る
+    <% end %>
+</div>

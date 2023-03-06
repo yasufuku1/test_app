@@ -1,0 +1,43 @@
+.user-table {
+    margin: 20px auto;
+    border: 1px solid;
+    padding: 10px;
+}
+td:first-child {
+    width: 120px;
+}
+.user-show-link {
+    text-align: center;
+}
+
+.edit-field {
+    width: 500px;
+    margin: 10px auto;
+}
+
+.button-box {
+    text-align: center;
+}
+
+.back-button {
+    display: block;
+    margin: 10px auto;
+    width: 160px;
+    height: 30px;
+    background-color: #0d6efd;
+    border: 2px solid #0d6efd;
+    transition: .4s;
+}
+
+.back-button:hover {
+    background-color: azure;
+}
+
+a.back-button {
+    color: azure;
+    text-align: center;
+    line-height: 175%;
+}
+a.back-button:hover {
+    color: #0d6efd;
+}
