@@ -7,13 +7,13 @@
         </tbody>
     </table>
 
-    <ul class="user-show-link">
-        <li>
-            <%= link_to edit_user_path do %>
+    <ul class="list-link-box">
+        <li class="link">
+            <%= link_to edit_user_path, class: "go-button" do %>
                 プロフィールを編集
             <% end %>
         </li>
-        <li>
+        <li class="link">
             <%= link_to tests_path, class: "back-button" do %>
                 テスト一覧に戻る
             <% end %>
