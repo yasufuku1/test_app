@@ -1,7 +1,37 @@
 <div class="container">
     <h2><span class="title">テスト一覧</span></h2>
-    <span class="test-index01">ようこそ、<%= current_user.name %>さん！</span>
+    <span class="test-index-user">ようこそ、<%= current_user.name %>さん！</span>
+
+    <table class="test-table">
+        <thead>
+            <tr>
+                <th class="test-index-title">テスト名</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @tests.each do |test| %>
+            <tr>
+                <td class="test-index-box01"><%= test.title %></td>
+                <td>
+                    <%= link_to test_path(test), data: { turbo_method: :patch }, class: "Update-link" do %>
+                        編集する
+                    <% end %>
+                </td>
+                <td>
+                    <%= link_to test_path(test), data:{ turbo_method: :delete }, class: "delete-link" do %>
+                        削除する
+                    <% end %>
+                </td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
     <ul class="list-link-box">
+        <li class="link">
+            <%= link_to new_test_path, class: "go-button" do %>
+                テストを新規作成
+            <% end %>
+        </li>
         <li class="link">
             <%= link_to user_path(current_user), class: "go-button" do %>
                 ユーザ詳細ページ
