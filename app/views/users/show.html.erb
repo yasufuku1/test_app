@@ -1,4 +1,22 @@
 <div class="container">
-    <h2><span class="ユーザ詳細"></span></h2>
-    
+    <h2><span class="title">ユーザ詳細ページ</span></h2>
+    <table class="user-table">
+        <tbody>
+            <tr><td>ユーザネーム:</dt><td><%= @user.name %></td></tr>
+            <tr><td>email:</dt><td><%= @user.email%></td></tr>
+        </tbody>
+    </table>
+
+    <ul class="list-link-box">
+        <li class="link">
+            <%= link_to edit_user_path, class: "go-button" do %>
+                プロフィールを編集
+            <% end %>
+        </li>
+        <li class="link">
+            <%= link_to tests_path, class: "back-button" do %>
+                テスト一覧に戻る
+            <% end %>
+        </li>
+    </ul>
 </div>
