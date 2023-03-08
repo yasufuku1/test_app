@@ -3,6 +3,7 @@ class TestsController < ApplicationController
 
     def index
         @tests = Test.all
+        @test = Test.new
     end
 
     def new

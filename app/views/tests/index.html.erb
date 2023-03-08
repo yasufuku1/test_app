@@ -28,8 +28,16 @@
     </table>
     <ul class="list-link-box">
         <li class="link">
-            <%= link_to new_test_path, class: "go-button" do %>
-                テストを新規作成
+            <%= form_with(model: @test, url: tests_path, data: { turbo_method: :post }) do |f| %>
+                <%= render 'devise/shared/error_messages', test: f.object %>
+                <div class="field">
+                    <%= f.label :"テスト名" %><br />
+                    <%= f.text_field :title, autofocus: true, autocomplete: "テスト名"  %>
+                </div>
+
+                <div class="actions">
+                    <%= f.submit "テスト新規登録" %>
+                </div>
             <% end %>
         </li>
         <li class="link">
