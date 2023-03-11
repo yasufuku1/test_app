@@ -1,7 +1,45 @@
 <div class="container">
     <h2><span class="title">テスト一覧</span></h2>
-    <span class="test-index01">ようこそ、<%= current_user.name %>さん！</span>
+    <span class="test-index-user">ようこそ、<%= current_user.name %>さん！</span>
+
+    <table class="test-table">
+        <thead>
+            <tr>
+                <th class="test-index-title">テスト名</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @tests.each do |test| %>
+            <tr>
+                <td class="test-index-box01"><%= test.title %></td>
+                <td>
+                    <%= link_to edit_test_path(test), class: "Update-link" do %>
+                        編集する
+                    <% end %>
+                </td>
+                <td>
+                    <%= link_to test_path(test), data:{ turbo_method: :delete }, class: "delete-link" do %>
+                        削除する
+                    <% end %>
+                </td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
     <ul class="list-link-box">
+        <li class="link">
+            <%= form_with(model: @test, url: tests_path, data: { turbo_method: :post }) do |f| %>
+                <%= render 'devise/shared/error_messages', test: f.object %>
+                <div class="field">
+                    <%= f.label :"テスト名" %><br />
+                    <%= f.text_field :title, autofocus: true, autocomplete: "テスト名"  %>
+                </div>
+
+                <div class="actions">
+                    <%= f.submit "テスト新規登録" %>
+                </div>
+            <% end %>
+        </li>
         <li class="link">
             <%= link_to user_path(current_user), class: "go-button" do %>
                 ユーザ詳細ページ

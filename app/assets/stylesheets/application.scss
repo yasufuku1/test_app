@@ -27,7 +27,6 @@ li {
 .container {
     margin: 30px;
 }
-
 h2 {
     text-align: center;
 }
@@ -35,7 +34,6 @@ h2 {
     font-size: 2.0rem;
     font-weight: bold;
 }
-
 .go-button {
     display: block;
     margin: 10px auto;
@@ -45,21 +43,17 @@ h2 {
     border: 2px solid #20d17e;
     transition: .4s;
 }
-
 .go-button:hover {
     background-color: azure;
 }
-
 a.go-button {
     color: azure;
     text-align: center;
     line-height: 175%;
 }
-
 a.go-button:hover {
     color: #20d17e;
 }
-
 .back-button {
     display: block;
     margin: 10px auto;
@@ -69,11 +63,9 @@ a.go-button:hover {
     border: 2px solid #0d6efd;
     transition: .4s;
 }
-
 .back-button:hover {
     background-color: azure;
 }
-
 a.back-button {
     color: azure;
     text-align: center;

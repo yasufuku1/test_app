@@ -1,0 +1,24 @@
+<div class="container">
+    <h2><span class="title">テスト新規作成</span></h2>
+
+    <div class="test-innder">
+        <%= form_with(model: @test, url: tests_path, data: { turbo_method: :post }) do |f| %>
+        <%= render 'devise/shared/error_messages', test: f.object %>
+        <div class="field">
+            <%= f.label :"テスト名" %><br />
+            <%= f.text_field :title, autofocus: true, autocomplete: "テスト名"  %>
+        </div>
+
+        <div class="actions">
+            <%= f.submit "テスト新規登録" %>
+        </div>
+        <% end %>
+        <ul class="list-link-box">
+            <li>
+                <%= link_to tests_path, class: "back-button" do %>
+                    テスト一覧に戻る
+                <% end %>
+            </li>
+        </ul>
+    </div>
+</div>

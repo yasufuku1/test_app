@@ -1,5 +1,36 @@
-.test-index01 {
+.test-index-user {
     display: block;
     margin: 30px;
     text-align: center;
+}
+.test-innder {
+    max-width: 500px;
+    padding: 15px 20px;
+    margin: 0 auto;
+}
+.test-table {
+    margin: 20px auto;
+    border: 1px solid;
+    padding: 10px;
+}
+.test-index-title {
+    padding-left: 29px;
+    text-align: left;
+}
+.test-index-box01 {
+    width: 200px;
+    padding-left: 30px;
+}
+input#test_title {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #1b2538;
+    line-height: 1.5rem;
+    width: 370px;
+}
+.update-link {
+    margin-left: 10px;
+}
+.delete-link {
+    margin-left: 10px;
 }
