@@ -19,6 +19,19 @@ class TestsController < ApplicationController
         end
     end
 
+    def edit
+        @test = Test.find(params[:id])
+    end
+
+    def update
+        @test = Test.find(params[:id])
+        if @test.update(test_params)
+            redirect_to tests_path, notice: "テストを変更しました"
+        else
+            render :edit, status: :unprocessable_entity
+        end
+    end
+
     private
 
     def test_params

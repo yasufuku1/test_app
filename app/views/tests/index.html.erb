@@ -13,7 +13,7 @@
             <tr>
                 <td class="test-index-box01"><%= test.title %></td>
                 <td>
-                    <%= link_to test_path(test), data: { turbo_method: :patch }, class: "Update-link" do %>
+                    <%= link_to edit_test_path(test), class: "Update-link" do %>
                         編集する
                     <% end %>
                 </td>

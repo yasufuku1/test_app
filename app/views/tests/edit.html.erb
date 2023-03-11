@@ -1,0 +1,23 @@
+<div class="container">
+    <h2><span>編集</span></h2>
+
+    <div class="test-innder">
+        <%= form_with(model: @test, url: test_path(@test), data: { turbo_method: :patch }) do |f| %>
+            <%= render 'devise/shared/error_messages', test: f.object %>
+            <div class="field">
+                <%= f.label :"テスト名" %>
+                <%= f.text_field :title , autofocus: true, autocomplete: "テスト名"%>
+            </div>
+            <div class="action">
+                <%= f.submit "変更する" %>
+            </div>
+            <ul class="list-link-box">
+                <li>
+                    <%= link_to tests_path, class: "back-button" do %>
+                        テスト一覧に戻る
+                    <% end %>
+                </li>
+            </ul>
+        <% end %>
+    </div>
+</div>
